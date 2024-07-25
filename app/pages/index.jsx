@@ -64,6 +64,7 @@ const DEFAULT_OPTIONS = {
 
       return `<pre class="hljs"><code>${escape(str)}</code></pre>`;
     },
+    linkify: true
   },
   katex: {
     'throwOnError': false,
@@ -235,7 +236,9 @@ hideThemeButton() {
           ...DEFAULT_OPTIONS.toc,
           ...toc
         })
-        .use(wikilinks)
+        .use(wikilinks, {
+            base: ""
+        })
     }
 
     // Theme already applied
