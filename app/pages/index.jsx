@@ -9,6 +9,7 @@ import footnote from 'markdown-it-footnote'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItToc from 'markdown-it-toc-done-right'
 import markdownDeflist from 'markdown-it-deflist'
+import wikilinks  from 'markdown-it-wikilinks'
 
 import mk from './katex'
 import chart from './chart'
@@ -106,8 +107,7 @@ export default class PreviewPage extends React.Component {
   showThemeButton() {
     this.setState({ themeModeIsVisible: true })
   }
-
-  hideThemeButton() {
+hideThemeButton() {
     this.setState({ themeModeIsVisible: false })
   }
 
