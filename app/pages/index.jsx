@@ -235,6 +235,7 @@ hideThemeButton() {
           ...DEFAULT_OPTIONS.toc,
           ...toc
         })
+        .use(wikilinks)
     }
 
     // Theme already applied
